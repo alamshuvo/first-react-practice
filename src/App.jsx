@@ -3,18 +3,32 @@
 // import viteLogo from '/vite.svg'
 import './App.css'
 import Todo from './Todo';
+import Actor from './Actor';
+import Singer from './Singer';
 
 function App() {
-
+const Actors=["bappa raj","soriful raj","josim","Rubel","Manna"]
+const Singers=[
+  {name:"Mahfuzur Rahman",age:65},
+  {name:"Eva Rahman",age:35},
+  {name:"Suvro dev",age:45}
+]
   return (
     <>
       <h1>Vite + React</h1>
       <h1>This is</h1>
-      <Todo course="MERN stack" isDone={true}></Todo>
+      {/* <Todo course="MERN stack" isDone={true}></Todo>
       <Todo course="PHP Laravel" isDone={false} ></Todo>
       <Person></Person>
       <Person></Person>
-      <Person></Person>
+      <Person></Person> */}
+      <Actor name="Sakib khan"></Actor>
+      {
+        Actors.map(actor=> <Actor name={actor}></Actor>)
+      }
+      {
+        Singers.map(singer=><Singer singer={singer}></Singer>)
+      }
      <Student name="iftakhar" className="MBA" age="24" ispassed={true}></Student>
      <Student name="Jenia afrin " className="MBBS" age="21" ispassed={false}></Student>
      <Student name="Ibnat Hamidi" className="English " age="23" ispassed={true}></Student>
